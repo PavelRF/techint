@@ -17,12 +17,17 @@ if(isset($_POST['GENDER_ID'])) $GENDER_ID = $_POST['GENDER_ID'];
 if(isset($_POST['QUIZ'])) $QUIZ = $_POST['QUIZ'];
 if(isset($_POST['ACCEPT_POST_FLAG'])) $ACCEPT_POST_FLAG = $_POST['ACCEPT_POST_FLAG'];
  
-if ($password==$password_confirm)
+if (checkdate($birthdate_month, $birthdate_day, $birthdate_year)==false)
+{
+	echo "Дата некорректна!";
+}
+elseif ($password==$password_confirm)
 {
 echo "Ваш логин: $login  <br> Ваш пароль: $password <br> Повторение пароля: $password_confirm <br> Имя: $FIRST_NAME <br>
 Фамилия: $LAST_NAME <br> Отчество: $MIDDLE_NAME <br> E-mail: $EMAIL <br> Телефон: $PHONE <br> Номер паспорта: $PASSPORT_ID <br>
 Дата рождения: $birthdate_day $birthdate_month $birthdate_year <br> Пол: $GENDER_ID <br>
 Ответ на вопрос: $QUIZ <br> Рассылка: $ACCEPT_POST_FLAG";
 }
-else echo "Пароли не совпадают!"
+else echo "Пароли не совпадают!";
+
 ?>
