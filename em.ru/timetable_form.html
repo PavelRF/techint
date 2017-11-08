@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>"Расписание вылетов."</title>
+<link rel="shortcut icon" href="pic/Logo_Elon.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<meta charset="utf-8">
+</head>
+<body>
+	<header>
+	<h1>Посмотреть расписание</h1>
+	</header>
+	<form action="php/timetable_form.php" id="TimeForm" method="POST"> 
+		<table>
+			<tr>
+				<td>Пункты отправления и прибытия</td>
+			</tr>
+				<td>
+					<input id="" name="WHENCE" type="text" value="" placeholder="ОТКУДА" required/>
+				</td>
+				<td>
+					<input id="" name="WHERE" type="text" value="" placeholder="КУДА" required/>
+				</td>
+			</tr>
+			<tr>
+				<td>Дата и время отправления</td>
+			</tr>
+			<tr>
+				<td>
+					<input id="DATE_DEPART" name="DATE_DEPART" type="date" required/>
+				</td>
+				<td>
+					<input id="TIME_DEPART" name="TIME_DEPART" type="time" required/>
+				</td>			
+			</tr>
+			
+			<tr>
+				<td>
+					<input type="submit" value="Найти" style="width: 100%"/>
+				</td>
+			</tr>
+		</table>				
+	</form>
+</body>
+</html>
